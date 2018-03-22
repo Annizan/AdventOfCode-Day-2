@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Day2_Corruption_Checksum
 {
@@ -26,7 +27,7 @@ namespace Day2_Corruption_Checksum
 
         private void FormatRow(string rowInput)
         {
-            string[] rowtable = rowInput.Split(' ');
+            string[] rowtable = Regex.Split(rowInput, @"\s+");
             foreach (string number in rowtable)
             {
                 rowNumbers.Add(int.Parse(number));

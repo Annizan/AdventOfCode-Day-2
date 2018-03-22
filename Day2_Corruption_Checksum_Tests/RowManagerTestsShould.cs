@@ -12,7 +12,8 @@ namespace Day2_Corruption_Checksum_Tests
     {
         [TestCase("2 4 6 8", 6)]
         [TestCase("2 4 12 8", 10)]
-        [TestCase("250 400 165 1000 56 1 876 172 4657 5001 574", 5000)]
+        [TestCase("2 4   12 8", 10)]
+        [TestCase("250    400 165 1000 56 1 876 172 4657 5001 574", 5000)]
         public void Give_The_Difference_Between_Smaller_And_Larger_Number_Of_A_Row(string rowInput, int expected)
         {
             RowManager rowManager = new RowManager();
